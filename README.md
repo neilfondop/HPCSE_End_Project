@@ -699,7 +699,7 @@ export EASYBUILD_PREFIX=$HOME/easybuild
 export EASYBUILD_BUILDPATH=/dev/shm/$USER
 eb /home/users/$USER/.local/easybuild/software/EasyBuild/4.9.1/easybuild/easyconfigs/r/ReFrame/ReFrame-4.3.3.eb --job --job-cores 64 --job-max-walltime 3 --robot --trace
 ```
-### Step 5: Load ReFrame 
+### Step 5: Load ReFrame and git repository 
 ```bash
 module load devel/ReFrame/4.3.3
 ```
@@ -708,6 +708,10 @@ mkdir -p $HOME/ReFrame_test
 cd $HOME/ReFrame_test
 git clone https://github.com/reframe-hpc/hpc-tests.git
 cd hpc-tests/apps/openfoam
+```
+### Step 6: Modify the reframe_openfoam.py and execute the reframe command with 
+```bash
+reframe -c reframe_openfoam.py -r
 ```
 
 
